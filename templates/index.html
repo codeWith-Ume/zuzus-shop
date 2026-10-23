@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<!-- Hero Section -->
+<div class="container py-5">
+    <div class="row align-items-center">
+
+        <div class="col-md-6">
+            <h1 class="display-3 fw-bold">
+                Cuddle More,<br>
+                Worry Less! 🧸
+            </h1>
+
+            <p class="lead mt-3">
+                Welcome to Zuzu's Shop, your happy place for
+                adorable soft toys, fluffy teddy bears, and
+                lovely gifts for your special people.
+            </p>
+
+            <a href="{% url 'shop' %}"
+               class="btn btn-dark btn-lg rounded-pill mt-3">
+                Shop Now 🛍️
+            </a>
+
+            <a href="/about"
+               class="btn btn-outline-dark btn-lg rounded-pill mt-3">
+                Explore More
+            </a>
+        </div>
+
+        <div class="col-md-6 mt-4 mt-md-0">
+            <img
+                src="https://images.unsplash.com/photo-1559454403-b8fb88521f11?auto=format&fit=crop&w=900&q=80"
+                class="img-fluid rounded-4 shadow"
+                alt="Cute soft toys">
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Features Section -->
+<div class="bg-light py-5">
+    <div class="container">
+
+        <h2 class="text-center fw-bold mb-5">
+            Why You'll Love Zuzu's Shop 💗
+        </h2>
+
+        <div class="row g-4 text-center">
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm rounded-4 h-100 p-4">
+                    <h1>🧸</h1>
+                    <h4>Adorable Collection</h4>
+                    <p>
+                        Discover cute and cuddly soft toys
+                        for your collection.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm rounded-4 h-100 p-4">
+                    <h1>🎁</h1>
+                    <h4>Lovely Gifts</h4>
+                    <p>
+                        Find sweet gifts for birthdays
+                        and special occasions.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow-sm rounded-4 h-100 p-4">
+                    <h1>💖</h1>
+                    <h4>Made for Smiles</h4>
+                    <p>
+                        Bring a little extra happiness
+                        to someone's day.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<!-- Popular Products Section -->
+<div class="container py-5">
+
+    <h2 class="text-center fw-bold mb-2">
+        Our Cute Favorites 🐻
+    </h2>
+
+    <p class="text-center mb-5">
+        Meet some adorable friends waiting for you!
+    </p>
+
+    <div class="row g-4">
+
+        <!-- Product 1 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img
+                    src="{% static 'images/classicteddybear.jpg' %}"
+                    class="card-img-top"
+                    alt="Teddy Bear"
+                    style="height:250px; object-fit:cover;">
+
+                <div class="card-body text-center">
+                    <h5>Classic Teddy Bear</h5>
+                    <p>₹499</p>
+                    <a href="{% url 'shop' %}"
+                       class="btn btn-dark rounded-pill">
+                        View Collection
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img
+                    src="{% static 'images/lovelybunny.webp' %}"
+                    class="card-img-top"
+                    alt="Bunny Toy"
+                    style="height:250px; object-fit:cover;">
+
+                <div class="card-body text-center">
+                    <h5>Lovely Bunny</h5>
+                    <p>₹349</p>
+                    <a href="{% url 'shop' %}"
+                       class="btn btn-dark rounded-pill">
+                        View Collection
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm border-0">
+                <img
+                    src="{% static 'images/cutepanda.jpeg' %}"
+                    class="card-img-top"
+                    alt="Panda Toy"
+                    style="height:250px; object-fit:cover;">
+
+                <div class="card-body text-center">
+                    <h5>Cute Panda</h5>
+                    <p>₹599</p>
+                    <a href="{% url 'shop' %}"
+                       class="btn btn-dark rounded-pill">
+                        View Collection
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+        <a href="{% url 'shop' %}"
+           class="btn btn-dark btn-lg rounded-pill px-5">
+            Explore All Toys 🛍️
+        </a>
+    </div>
+
+</div>
+
+
+<!-- Final Banner -->
+<div class="bg-light py-5">
+    <div class="container text-center">
+
+        <h2 class="fw-bold">
+            A Little Toy, A Lot of Love! 💕
+        </h2>
+
+        <p class="lead mt-3">
+            Find your new cuddle buddy at Zuzu's Shop.
+        </p>
+
+        <a href="{% url 'shop' %}"
+           class="btn btn-dark btn-lg rounded-pill">
+            Start Shopping
+        </a>
+
+    </div>
+</div>
+
+{% endblock body %}

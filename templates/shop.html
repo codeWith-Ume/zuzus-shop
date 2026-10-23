@@ -1,0 +1,183 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Shop{% endblock title %}
+
+{% block body %}
+
+<div class="container py-5">
+
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Welcome to Zuzu's Shop 🧸</h1>
+        <p class="lead">Find your favorite cuddle buddy! 💗</p>
+    </div>
+
+    <div class="row g-4">
+
+        <!-- Toy 1: Teddy Bear -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/classicteddybear.jpg' %}" class="card-img-top" alt="Teddy Bear" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Classic Teddy Bear</h5>
+                    <p>A soft and cuddly teddy bear.</p>
+                    <h5>₹499</h5>
+                    <a href="{% url 'buy_now' 1 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 2: Bunny -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/lovelybunny.webp' %}" class="card-img-top" alt="Bunny Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Lovely Bunny</h5>
+                    <p>A cute bunny for your cuddle time.</p>
+                    <h5>₹349</h5>
+                    <a href="{% url 'buy_now' 2 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 3: Panda -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/cutepanda.jpeg' %}" class="card-img-top" alt="Panda Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Cute Panda</h5>
+                    <p>A lovely panda to brighten your day.</p>
+                    <h5>₹599</h5>
+                    <a href="{% url 'buy_now' 3 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 4: Elephant -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/babyElephant.jpeg' %}" class="card-img-top" alt="Elephant Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Baby Elephant</h5>
+                    <p>A sweet little elephant friend.</p>
+                    <h5>₹449</h5>
+                    <a href="{% url 'buy_now' 4 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 5: Monkey -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/playfulMonkey.webp' %}" class="card-img-top" alt="Monkey Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Playful Monkey</h5>
+                    <p>A fun and adorable monkey toy.</p>
+                    <h5>₹399</h5>
+                    <a href="{% url 'buy_now' 5 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 6: Cat -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/pluffyKitty.webp' %}" class="card-img-top" alt="Cat Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Fluffy Kitty</h5>
+                    <p>A cute kitty for every cat lover.</p>
+                    <h5>₹299</h5>
+                    <a href="{% url 'buy_now' 6 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 7: Puppy -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/littlePuppy.jpeg' %}" class="card-img-top" alt="Puppy Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Little Puppy</h5>
+                    <p>A lovable puppy to cuddle with.</p>
+                    <h5>₹399</h5>
+                    <a href="{% url 'buy_now' 7 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 8: Lion -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/littlelion.webp' %}" class="card-img-top" alt="Lion Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Little Lion</h5>
+                    <p>A tiny lion with a big personality.</p>
+                    <h5>₹549</h5>
+                    <a href="{% url 'buy_now' 8 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 9: Duck -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/YellowDuck.avif' %}" class="card-img-top" alt="Duck Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Yellow Duck</h5>
+                    <p>A cheerful little duck soft toy.</p>
+                    <h5>₹249</h5>
+                    <a href="{% url 'buy_now' 9 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 10: Unicorn -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/magicUnicorn.webp' %}" class="card-img-top" alt="Unicorn Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Magic Unicorn</h5>
+                    <p>A magical friend for your collection.</p>
+                    <h5>₹699</h5>
+                    <a href="{% url 'buy_now' 10 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 11: Frog -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/happyfrog.jpeg' %}" class="card-img-top" alt="Frog Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Happy Frog</h5>
+                    <p>A funny and adorable frog companion.</p>
+                    <h5>₹329</h5>
+                    <a href="{% url 'buy_now' 11 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toy 12: Koala -->
+        <div class="col-12 col-sm-6 col-lg-4">
+            <div class="card h-100 shadow-sm">
+                <img src="{% static 'images/sleepingKoala.jpg' %}" class="card-img-top" alt="Koala Toy" style="height:250px; object-fit:cover;">
+                <div class="card-body text-center">
+                    <h5>Sleepy Koala</h5>
+                    <p>A soft little koala for peaceful cuddles.</p>
+                    <h5>₹499</h5>
+                    <a href="{% url 'buy_now' 12 %}" class="btn btn-dark">Buy Now</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="text-center mt-5">
+        <h3>Found Your Favorite? 💕</h3>
+        <p>Choose your favorite soft toy and spread some happiness!</p>
+        <a href="/" class="btn btn-dark btn-lg">Back to Home</a>
+    </div>
+
+</div>
+
+{% endblock body %}

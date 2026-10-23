@@ -1,0 +1,131 @@
+{% extends "base.html" %}
+{% block title %}Contact{% endblock title %}
+{% block body %}
+
+<div class="container py-5">
+
+    <!-- Heading -->
+    <div class="text-center mb-5">
+        <h1 class="display-4 fw-bold">Contact Us 💌</h1>
+        <p class="lead">
+            Have a question? We'd love to hear from you! 🧸
+        </p>
+    </div>
+
+    <div class="row g-5">
+
+        <!-- Contact Information -->
+        <div class="col-md-5">
+            <div class="p-4 bg-light rounded-4 h-100">
+
+                <h3 class="mb-4">Get in Touch 💗</h3>
+
+                <p>
+                    <strong>🧸 Zuzu's Shop</strong>
+                </p>
+
+                <p>
+                    Have questions about our soft toys, product availability,
+                    or your order? Send us a message!
+                </p>
+
+                <hr>
+
+                <p>
+                    <strong>💌 Email:</strong><br>
+                    support@zuzusshop.com
+                </p>
+
+                <p>
+                    <strong>🛍️ Shopping:</strong><br>
+                    Find your favorite soft toys and make someone smile.
+                </p>
+
+                <p class="mb-0">
+                    <strong>💖 Our Promise:</strong><br>
+                    We're here to help make your shopping experience special.
+                </p>
+
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="col-md-7">
+            <div class="card border-0 shadow-sm rounded-4">
+                <div class="card-body p-4">
+
+                    <h3 class="mb-4">Send Us a Message ✨</h3>
+
+                    <form method="POST" action="">
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="name" class="form-label">
+                                Your Name
+                            </label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="name"
+                                   name="name"
+                                   placeholder="Enter your name"
+                                   required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label">
+                                Your Email
+                            </label>
+                            <input type="email"
+                                   class="form-control"
+                                   id="email"
+                                   name="email"
+                                   placeholder="Enter your email"
+                                   required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="subject" class="form-label">
+                                Subject
+                            </label>
+                            <input type="text"
+                                   class="form-control"
+                                   id="subject"
+                                   name="subject"
+                                   placeholder="What is your message about?"
+                                   required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label">
+                                Your Message
+                            </label>
+                            <textarea class="form-control"
+                                      id="message"
+                                      name="message"
+                                      rows="5"
+                                      placeholder="Write your message here..."
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit"
+                                class="btn btn-dark btn-lg rounded-pill px-4">
+                            Send Message 💌
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Closing Message -->
+    <div class="text-center mt-5">
+        <h4>Thank You for Visiting Zuzu's Shop! 🧸💕</h4>
+        <p>Every little message makes our day brighter.</p>
+    </div>
+
+</div>
+
+{% endblock body %}
