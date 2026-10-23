@@ -1,3 +1,4 @@
+import os
 """
 Django settings for Hello project.
 
@@ -20,10 +21,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/6.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-b&^e=_hka$28r%ad%0+!u=nctu-3n58z8*jw@2daf7!_n7u(0i'
+SECRET_KEY = os.environ.get("SECRET_KEY", "django-insecure-local-dev-key-change-before-production")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = os.environ.get("DEBUG", "False") == "True"
 
 ALLOWED_HOSTS = [".onrender.com", "localhost", "127.0.0.1"]
 
